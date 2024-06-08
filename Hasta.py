@@ -32,9 +32,7 @@ class Hasta:
         self.__tedavi = tedavi
 
     def tedavi_suresi_hesapla(self):
-        # Tedavi süresini hesaplamak için örnek bir metod
-        # Bu metodun içeriği gereksinimlere göre değiştirilebilir
-        return len(self.__tedavi) * 2  # Örnek olarak tedavi süresi
+        return len(self.__tedavi) * 2
 
     def __str__(self):
         return f'Hasta No: {self.__hasta_no}, Ad: {self.__ad}, Soyad: {self.__soyad}, Doğum Tarihi: {self.__dogum_tarihi}, Hastalık: {self.__hastalik}, Tedavi: {self.__tedavi}'

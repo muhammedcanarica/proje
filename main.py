@@ -15,7 +15,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
 # Çerçeve satırlarını genişletme
-pd.set_option('display.width', 100000)
+pd.set_option('display.width', 1000)
 
 def main():
     doktor1 = ""
@@ -48,7 +48,7 @@ def main():
         print(f'Doktor oluşturulurken bir hata oluştu: {e}')
 
     try:
-        hemsire1 = Hemsire(6, "Seçil", "Taş", "Yoğun Bakım", 4500, 40, "Yoğun Bakım Sertifikası", "Memorial Hastanesi")
+        hemsire1 = Hemsire(6, "Çeçil", "Taş", "Yoğun Bakım", 4500, 40, "Yoğun Bakım Sertifikası", "Memorial Hastanesi")
         hemsire2 = Hemsire(7, "Yunus", "Taş", "Ameliyathane", 4200, 38, "Ameliyathane Sertifikası", "Uludağ Üniversitesi")
         hemsire3 = Hemsire(8, "Şebnem", "Mera", "Dahiliye", 4600, 10, "Dahiliye Sertifikası", "Hacettepe Hastanesi")
         print(hemsire1)
@@ -69,45 +69,45 @@ def main():
 
     data = [
         {'personel_no': personel1.get_personel_no(), 'ad': personel1.get_ad(), 'soyad': personel1.get_soyad(),
-         'departman': personel1.get_departman(), 'maas': personel1.get_maas(), 'uzmanlik': '', 'deneyim_yili': 0,
-         'hastane': '', 'calisma_saati': '', 'sertifika': '', 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '',
-         'tedavi': ''},
+         'departman': personel1.get_departman(), 'maas': personel1.get_maas(), 'uzmanlik': 0, 'deneyim_yili': 0,
+         'hastane': 0, 'calisma_saati': 0, 'sertifika': 0, 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0,
+         'tedavi': 0},
         {'personel_no': personel2.get_personel_no(), 'ad': personel2.get_ad(), 'soyad': personel2.get_soyad(),
-         'departman': personel2.get_departman(), 'maas': personel2.get_maas(), 'uzmanlik': '', 'deneyim_yili': 0,
-         'hastane': '', 'calisma_saati': '', 'sertifika': '', 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '',
-         'tedavi': ''},
+         'departman': personel2.get_departman(), 'maas': personel2.get_maas(), 'uzmanlik': 0, 'deneyim_yili': 0,
+         'hastane': 0, 'calisma_saati': 0 , 'sertifika': 0, 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0,
+         'tedavi': 0},
         {'personel_no': doktor1.get_personel_no(), 'ad': doktor1.get_ad(), 'soyad': doktor1.get_soyad(),
          'departman': doktor1.get_departman(), 'maas': doktor1.get_maas(), 'uzmanlik': doktor1.get_uzmanlik(),
-         'deneyim_yili': doktor1.get_deneyim_yili(), 'hastane': doktor1.get_hastane(), 'calisma_saati': '',
-         'sertifika': '', 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '', 'tedavi': ''},
+         'deneyim_yili': doktor1.get_deneyim_yili(), 'hastane': doktor1.get_hastane(), 'calisma_saati': 0,
+         'sertifika': 0, 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0, 'tedavi': 0},
         {'personel_no': doktor2.get_personel_no(), 'ad': doktor2.get_ad(), 'soyad': doktor2.get_soyad(),
          'departman': doktor2.get_departman(), 'maas': doktor2.get_maas(), 'uzmanlik': doktor2.get_uzmanlik(),
-         'deneyim_yili': doktor2.get_deneyim_yili(), 'hastane': doktor2.get_hastane(), 'calisma_saati': '',
-         'sertifika': '', 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '', 'tedavi': ''},
+         'deneyim_yili': doktor2.get_deneyim_yili(), 'hastane': doktor2.get_hastane(), 'calisma_saati': 0,
+         'sertifika': 0, 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0, 'tedavi': 0},
         {'personel_no': doktor3.get_personel_no(), 'ad': doktor3.get_ad(), 'soyad': doktor3.get_soyad(),
          'departman': doktor3.get_departman(), 'maas': doktor3.get_maas(), 'uzmanlik': doktor3.get_uzmanlik(),
-         'deneyim_yili': doktor3.get_deneyim_yili(), 'hastane': doktor3.get_hastane(), 'calisma_saati': '',
-         'sertifika': '', 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '', 'tedavi': ''},
+         'deneyim_yili': doktor3.get_deneyim_yili(), 'hastane': doktor3.get_hastane(), 'calisma_saati': 0,
+         'sertifika': 0, 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0, 'tedavi': 0},
         {'personel_no': hemsire1.get_personel_no(), 'ad': hemsire1.get_ad(), 'soyad': hemsire1.get_soyad(),
-         'departman': hemsire1.get_departman(), 'maas': hemsire1.get_maas(), 'uzmanlik': '', 'deneyim_yili': 0,
+         'departman': hemsire1.get_departman(), 'maas': hemsire1.get_maas(), 'uzmanlik': 0, 'deneyim_yili': 0,
          'hastane': hemsire1.get_hastane(), 'calisma_saati': hemsire1.get_calisma_saati(),
-         'sertifika': hemsire1.get_sertifika(), 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '', 'tedavi': ''},
+         'sertifika': hemsire1.get_sertifika(), 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0, 'tedavi': 0},
         {'personel_no': hemsire2.get_personel_no(), 'ad': hemsire2.get_ad(), 'soyad': hemsire2.get_soyad(),
-         'departman': hemsire2.get_departman(), 'maas': hemsire2.get_maas(), 'uzmanlik': '', 'deneyim_yili': 0,
+         'departman': hemsire2.get_departman(), 'maas': hemsire2.get_maas(), 'uzmanlik': 0, 'deneyim_yili': 0,
          'hastane': hemsire2.get_hastane(), 'calisma_saati': hemsire2.get_calisma_saati(),
-         'sertifika': hemsire2.get_sertifika(), 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '', 'tedavi': ''},
+         'sertifika': hemsire2.get_sertifika(), 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0, 'tedavi': 0},
         {'personel_no': hemsire3.get_personel_no(), 'ad': hemsire3.get_ad(), 'soyad': hemsire3.get_soyad(),
-         'departman': hemsire3.get_departman(), 'maas': hemsire3.get_maas(), 'uzmanlik': '', 'deneyim_yili': 0,
+         'departman': hemsire3.get_departman(), 'maas': hemsire3.get_maas(), 'uzmanlik': 0, 'deneyim_yili': 0,
          'hastane': hemsire3.get_hastane(), 'calisma_saati': hemsire3.get_calisma_saati(),
-         'sertifika': hemsire3.get_sertifika(), 'hasta_no': '', 'dogum_tarihi': '', 'hastalik': '', 'tedavi': ''},
-        {'personel_no': '', 'ad': '', 'soyad': '', 'departman': '', 'maas': 0, 'uzmanlik': '', 'deneyim_yili': 0,
-         'hastane': '', 'calisma_saati': '', 'sertifika': '', 'hasta_no': hasta1.get_hasta_no(),
+         'sertifika': hemsire3.get_sertifika(), 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0, 'tedavi': 0},
+        {'personel_no': 0, 'ad': hasta1.get_ad(), 'soyad':hasta1.get_soyad(), 'departman': 0, 'maas': 0, 'uzmanlik': 0, 'deneyim_yili': 0,
+         'hastane': 0, 'calisma_saati':0, 'sertifika': 0, 'hasta_no': hasta1.get_hasta_no(),
          'dogum_tarihi': hasta1.get_dogum_tarihi(), 'hastalik': hasta1.get_hastalik(), 'tedavi': hasta1.get_tedavi()},
-        {'personel_no': '', 'ad': '', 'soyad': '', 'departman': '', 'maas': 0, 'uzmanlik': '', 'deneyim_yili':0 ,
-         'hastane': '', 'calisma_saati': '', 'sertifika': '', 'hasta_no': hasta2.get_hasta_no(),
+        {'personel_no': 0, 'ad': hasta2.get_ad(), 'soyad': hasta2.get_soyad(), 'departman': 0, 'maas': 0, 'uzmanlik': 0, 'deneyim_yili':0 ,
+         'hastane': 0, 'calisma_saati': 0, 'sertifika': 0, 'hasta_no': hasta2.get_hasta_no(),
          'dogum_tarihi': hasta2.get_dogum_tarihi(), 'hastalik': hasta2.get_hastalik(), 'tedavi': hasta2.get_tedavi()},
-        {'personel_no': '', 'ad': '', 'soyad': '', 'departman': '', 'maas': 0, 'uzmanlik': '', 'deneyim_yili': 0,
-         'hastane': '', 'calisma_saati': '', 'sertifika': '', 'hasta_no': hasta3.get_hasta_no(),
+        {'personel_no': 0, 'ad': hasta3.get_ad(), 'soyad': hasta3.get_soyad(), 'departman': 0, 'maas': 0, 'uzmanlik': 0, 'deneyim_yili': 0,
+         'hastane': 0, 'calisma_saati': 0, 'sertifika': 0, 'hasta_no': hasta3.get_hasta_no(),
          'dogum_tarihi': hasta3.get_dogum_tarihi(), 'hastalik': hasta3.get_hastalik(), 'tedavi': hasta3.get_tedavi()}
     ]
 
@@ -116,8 +116,14 @@ def main():
     print("DataFrame:")
     print(df)
 
-    # Boş olan kısımlara 0 yazdırma
-    df.fillna(0, inplace=True)
+    # Boş olan kısımlara None yazdırma
+    df.replace(0, 0, inplace=True)
+
+    # dogum_tarihi sütununu tarih formatına çevirme
+    df['dogum_tarihi'] = pd.to_datetime(df['dogum_tarihi'], errors='coerce')
+
+    print("DataFrame with corrected dogum_tarihi:")
+    print(df)
 
     # Doktorları uzmanlık alanlarına göre gruplandırarak toplam sayısını hesaplayıp ve yazdırma
     doktor_grup = df[df['uzmanlik'] != 0].groupby('uzmanlik').size()
@@ -133,7 +139,7 @@ def main():
     print("\nHasta adına göre alfabetik olarak sıralanmış DataFrame:")
     print(df_hasta_siralama)
 
-    # Maaşı 7000 TL üzerinde olanları bulup yazdırka
+    # Maaşı 7000 TL üzerinde olanları bulup yazdırma
     maas_ustu = df[df['maas'] > 7000]
     print("\nMaaşı 7000 TL üzerinde olan personeller:")
     print(maas_ustu)
@@ -142,9 +148,10 @@ def main():
     print("\nDoğum tarihi 1990 ve sonrası olan hastalar:")
     print(df_dogum_tarihi)
 
-    new_df = df[['ad', 'soyad', 'departman', 'maas', 'uzmanlik', 'deneyim_yili', 'hastalik', 'tedavi']]
+    yeni_df = df[['ad', 'soyad', 'departman', 'maas', 'uzmanlik', 'deneyim_yili', 'hastalik', 'tedavi']]
     print("\nYeni DataFrame:")
-    print(new_df)
+    print(yeni_df)
+
 
 if __name__ == "__main__":
     main()
