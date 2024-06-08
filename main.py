@@ -5,16 +5,16 @@ from Hasta import Hasta
 
 import pandas as pd
 
-# Maksimum sütun genişliğini artırın
+# Sütun genişliği
 pd.set_option('display.max_colwidth', None)
 
-# Maksimum sütun sayısını artırın
+# Sütun sayısı
 pd.set_option('display.max_columns', None)
 
-# Maksimum satır sayısını artırın
+# Maksimum satır sayısı
 pd.set_option('display.max_rows', None)
 
-# Veri çerçevesinin satırlarını geniş olacak şekilde ayarlayın
+# Çerçeve satırlarını genişletme
 pd.set_option('display.width', 100000)
 
 def main():
@@ -116,34 +116,32 @@ def main():
     print("DataFrame:")
     print(df)
 
-    # Boş olan değişken değerleri için 0 atama
+    # Boş olan kısımlara 0 yazdırma
     df.fillna(0, inplace=True)
 
-    # Doktorları uzmanlık alanlarına göre gruplandırarak toplam sayısını hesaplayın ve yazdırın
+    # Doktorları uzmanlık alanlarına göre gruplandırarak toplam sayısını hesaplayıp ve yazdırma
     doktor_grup = df[df['uzmanlik'] != 0].groupby('uzmanlik').size()
     print("\nDoktorların uzmanlık alanlarına göre gruplandırılmış toplam sayısı:")
     print(doktor_grup)
 
-    # 5 yıldan fazla deneyime sahip doktorların toplam sayısını bulun
+    # 5 yıldan fazla deneyimi olanları bulup yazdırma
     doktor_deneyim = df[df['deneyim_yili'] > 5]['deneyim_yili'].count()
     print("\n5 yıldan fazla deneyime sahip doktorların toplam sayısı:", doktor_deneyim)
 
-    # Hasta adına göre DataFrame'i alfabetik olarak sıralayın ve yazdırın
+    # Hasta adına göre alfabetik sıralama yapma
     df_hasta_siralama = df[df['hasta_no'] != 0].sort_values(by='ad')
     print("\nHasta adına göre alfabetik olarak sıralanmış DataFrame:")
     print(df_hasta_siralama)
 
-    # Maaşı 7000 TL üzerinde olan personelleri bulun ve yazdırın
+    # Maaşı 7000 TL üzerinde olanları bulup yazdırka
     maas_ustu = df[df['maas'] > 7000]
     print("\nMaaşı 7000 TL üzerinde olan personeller:")
     print(maas_ustu)
 
-    # Doğum tarihi 1990 ve sonrası olan hastaları gösterin ve yazdırın
     df_dogum_tarihi = df[df['dogum_tarihi'] >= '1990-01-01']
     print("\nDoğum tarihi 1990 ve sonrası olan hastalar:")
     print(df_dogum_tarihi)
 
-    # Yeni DataFrame elde edin
     new_df = df[['ad', 'soyad', 'departman', 'maas', 'uzmanlik', 'deneyim_yili', 'hastalik', 'tedavi']]
     print("\nYeni DataFrame:")
     print(new_df)
