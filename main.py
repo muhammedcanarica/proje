@@ -14,7 +14,7 @@ pd.set_option('display.max_columns', None)
 # Maksimum satır sayısı
 pd.set_option('display.max_rows', None)
 
-# Çerçeve satırlarını genişletme
+# Çerçeve satırlarını genişletm
 pd.set_option('display.width', 1000)
 
 def main():
@@ -70,7 +70,7 @@ def main():
     data = [
         {'personel_no': personel1.get_personel_no(), 'ad': personel1.get_ad(), 'soyad': personel1.get_soyad(),
          'departman': personel1.get_departman(), 'maas': personel1.get_maas(), 'uzmanlik': 0, 'deneyim_yili': 0,
-         'hastane': 0, 'calisma_saati': 0, 'sertifika': 0, 'hasta_no': 0, 'dogum_tarihi': 0, 'hastalik': 0,
+         'hastane': 0, 'calisma_saati': 0, 'sertifika': 0, 'hasta_no': 0, 'dogum_tarihi':0, 'hastalik': 0,
          'tedavi': 0},
         {'personel_no': personel2.get_personel_no(), 'ad': personel2.get_ad(), 'soyad': personel2.get_soyad(),
          'departman': personel2.get_departman(), 'maas': personel2.get_maas(), 'uzmanlik': 0, 'deneyim_yili': 0,
